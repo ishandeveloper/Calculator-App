@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'pages/about.dart';
+
 class HomePage extends StatefulWidget {
   
   @override
@@ -7,12 +9,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-String output="0";
+String _output="0";
 
 double numa=0;
 
 double numb=0;
-
+String output="0";
 String operand="";
 
 buttonPressed(String buttontext){
@@ -62,7 +64,7 @@ buttonPressed(String buttontext){
   }
 
   setState((){
-    output=double.parse(output).toStringAsFixed(2);
+    _output=double.parse(output).toStringAsFixed(2);
   });
 
 }
@@ -72,6 +74,7 @@ buttonPressed(String buttontext){
                     child: Container(
                       margin:EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                       child: MaterialButton(
+                        // highlightColor: Colors.grey[850],
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical:20.0),
                         
@@ -102,17 +105,27 @@ buttonPressed(String buttontext){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null,
       backgroundColor: Colors.black,
+      appBar:AppBar(title: Text(""),
+        backgroundColor: Colors.black,
+        leading: Container(
+          margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+          child: IconButton(icon: Icon(Icons.info,color: Colors.grey[800],),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()
+               ));
+              },),
+        ),
+      ),
       body:Container(
         child: Column(
           children: <Widget>[
-            SizedBox(height: 50,),
+            // SizedBox(height: 50,),
             
             Container(
               padding:EdgeInsets.symmetric(vertical:50, horizontal:24),
               alignment: Alignment.centerRight,
-              child: Text(output,
+              child: Text(_output,
               style: TextStyle(color: Colors.red,fontSize: 72,fontWeight: FontWeight.bold),
               ),
               ),
