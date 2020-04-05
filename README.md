@@ -2,6 +2,8 @@
 This app does what a simple calculator does, nothing fancy, But in an aesthetic way. Try this app and help yourself out ;)
 One of the first simple apps I created while on my journey to learn flutter.
 
+##### Download APK
+<pre><a href="https://github.com/ishandeveloper/Dictionary-App/raw/master/app.apk">https://github.com/ishandeveloper/Calculator-App/raw/master/app.apk</a></pre>
 
 ##### Demo
 
