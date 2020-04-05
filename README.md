@@ -1,28 +1,22 @@
-### Dictionary App
-Okay, we've all been there.While, Reading a novel, Listening to dialogues from our favourite movies or maybe just recieved something while chatting with your friends and confused about the meaning of a word? Try this app and help yourself out ;)
-
+### Calculator App
+This app does what a simple calculator does, nothing fancy, But in an aesthetic way. Try this app and help yourself out ;)
 One of the first simple apps I created while on my journey to learn flutter.
 
 
 ##### Demo
 
-  <img src="https://github.com/ishandeveloper/Dictionary-App/blob/master/screenshots/demo.gif?raw=false" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Dictionary-App/blob/master/screenshots/cat.jpg?raw=false" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Dictionary-App/blob/master/screenshots/about.jpg?raw=false" width="30%">
+  <img src="https://github.com/ishandeveloper/Calculator-App/blob/master/screenshots/demo.gif?raw=false" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Calculator-App/blob/master/screenshots/1.jpg?raw=false" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/ishandeveloper/Calculator-App/blob/master/screenshots/2.jpg?raw=false" width="30%">
   
-
-#### Dependencies
-
-* Dart ['http' package](https://pub.dev/packages/http)
-* Uses [Owlbot Dictionary API](https://owlbot.info/)
 
 ## Setup
 
   ##### Clone the repository
 ```bash
-git clone https://github.com/ishandeveloper/Dictionary-App.git
+git clone https://github.com/ishandeveloper/Calculator-App.git
 ```
   ##### Move to the desired folder
 ```bash
-cd \Dictionary-App
+cd \Calculator-App
 ```
 
   ##### To run the app, simply write
