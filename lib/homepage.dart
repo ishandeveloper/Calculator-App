@@ -1,7 +1,72 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+String output="0";
+
+double numa=0;
+
+double numb=0;
+
+String operand="";
+
+buttonPressed(String buttontext){
+  if(buttontext=="CLEAR"){
+    output="0";
+    numa=0;
+    numb=0;
+    operand="";
+  }
+  else if(buttontext=="+" || buttontext=="-" || buttontext=="/" || buttontext=="X"){
+    numa=double.parse(output);
+    operand=buttontext;
+    output="0";
+  }
+  else if(buttontext=="."){
+
+    if(output.contains(".")){
+      return;
+    }
+    else{
+      output=output+buttontext;
+    }
+  }
+  else if(buttontext=="="){
+    numb=double.parse(output);
+
+    if(operand=="+"){
+      output=(numa+numb).toString();
+    }
+    else if(operand=="-"){
+      output=(numa-numb).toString();
+    }
+    else if(operand=="/"){
+      output=(numa/numb).toString();
+    }
+    else if(operand=="X"){
+      output=(numa*numb).toString();
+    }
+
+    numa=0;
+    numb=0;
+
+
+  }
+  else{
+    output=output+buttontext;
+  }
+
+  setState((){
+    output=double.parse(output).toStringAsFixed(2);
+  });
+
+}
+
   Widget calcButton(String buttonText){
     return Expanded(
                     child: Container(
@@ -26,15 +91,14 @@ class HomePage extends StatelessWidget {
                         
                       ),
                       onPressed: (){
-                      
+                        buttonPressed(buttonText);
                       },
                   ),
                     ),
                 );
 
   }
-  
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +108,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 50,),
-            Text("0",style: TextStyle(color: Colors.white,fontSize: 40,),),
+            
+            Container(
+              padding:EdgeInsets.symmetric(vertical:50, horizontal:24),
+              alignment: Alignment.centerRight,
+              child: Text(output,
+              style: TextStyle(color: Colors.red,fontSize: 72,fontWeight: FontWeight.bold),
+              ),
+              ),
             
             Expanded(child: Divider(),),
             
