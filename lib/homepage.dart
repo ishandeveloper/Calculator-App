@@ -155,7 +155,7 @@ buttonPressed(String buttontext){
                     calcButton("1"),
                     calcButton("2"),
                     calcButton("3"),
-                    calcButton("4"),
+                    calcButton("-"),
                   ],
                 ),
                 Row(
