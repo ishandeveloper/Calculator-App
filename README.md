@@ -1,4 +1,5 @@
-<img src="https://github.com/ishandeveloper/Calculator-App/blob/master/screenshots/icon.png?raw=false" width="w00px">
+<img src="https://github.com/ishandeveloper/Calculator-App/blob/master/screenshots/icon.png?raw=false" width="200px">
+
 ### Calculator App
 This app does what a simple calculator does, nothing fancy, But in an aesthetic way. Try this app and help yourself out ;)
 One of the first simple apps I created while on my journey to learn flutter.
